@@ -1,1 +1,168 @@
-resume
+<!DOCTYPE html>
+
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>張弘新 - 個人簡介</title>
+    <style>
+        body {
+            font-family: '微軟正黑體', 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background: linear-gradient(135deg, #e6f0fa, #bcdffb);
+            color: #333;
+        }
+
+```
+    .container {
+        max-width: 850px;
+        margin: 40px auto;
+        background: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    h1 {
+        color: #2a5d9f;
+        border-bottom: 3px solid #bcdffb;
+        padding-bottom: 10px;
+        margin-top: 0;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    h2 {
+        color: #2a5d9f;
+        margin-top: 25px;
+        font-size: 1.4em;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    ul li {
+        padding: 6px 0;
+        border-left: 4px solid #2a5d9f;
+        padding-left: 10px;
+        margin-bottom: 6px;
+        background: #f8fbff;
+        border-radius: 5px;
+    }
+
+    .profile-section {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid #2a5d9f;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .about-text {
+        flex-grow: 1;
+    }
+
+    hr {
+        border: none;
+        height: 2px;
+        background: linear-gradient(to right, #2a5d9f, #bcdffb);
+        margin: 30px 0;
+    }
+
+    p, li {
+        font-size: 1.05em;
+    }
+
+    strong {
+        color: #2a5d9f;
+    }
+
+    .btn-download {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 12px 25px;
+        background: linear-gradient(135deg, #2a5d9f, #4682b4);
+        color: white;
+        text-decoration: none;
+        font-size: 1.1em;
+        font-weight: bold;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn-download:hover {
+        background: linear-gradient(135deg, #1d4473, #36648b);
+        transform: translateY(-2px);
+    }
+</style>
+```
+
+</head>
+<body>
+
+<div class="container">
+    <h1>張弘新 - 個人簡介網站</h1>
+
+```
+<div class="profile-section">
+    <img src="profile.jpg" alt="張弘新個人照片" class="profile-img">
+    <div class="about-text">
+        <h2>關於我</h2>
+        <p>您好，我是 <strong>張弘新</strong>，目前就讀 <strong>中原大學</strong> <strong>智慧運算與大數據學士班</strong> 的學生。</p>
+        <!-- 履歷下載按鈕 -->
+        <a href="resume.pdf" class="btn-download" target="_blank">📄 下載履歷</a>
+    </div>
+</div>
+
+<hr>
+
+<h2>興趣</h2>
+<ul>
+    <li>跑步</li>
+    <li>健走</li>
+    <li>跳舞</li>
+</ul>
+
+<hr>
+
+<h2>技能</h2>
+<ul>
+    <li><strong>程式語言:</strong> Python</li>
+    <li><strong>程式語言:</strong> C++</li>
+    <li><strong>程式語言:</strong> C</li>
+    <li><strong>專業技能:</strong> 混音師</li>
+</ul>
+
+<hr>
+
+<h2>未來展望</h2>
+<p>我的目標是成為一位 <strong>量子工程師</strong>。</p>
+
+<hr>
+
+<h2>聯絡方式</h2>
+<ul>
+    <li>Line</li>
+    <li>Gmail</li>
+    <li>Facebook (FB)</li>
+    <li>Instagram (IG)</li>
+    <li>電話號碼</li>
+</ul>
+```
+
+</div>
+
+</body>
+</html>
