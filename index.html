@@ -1,168 +1,150 @@
 <!DOCTYPE html>
-
 <html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>張弘新 - 個人簡介</title>
-    <style>
-        body {
-            font-family: '微軟正黑體', 'Arial', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            background: linear-gradient(135deg, #e6f0fa, #bcdffb);
-            color: #333;
-        }
-
-```
-    .container {
-        max-width: 850px;
-        margin: 40px auto;
-        background: white;
-        padding: 40px;
-        border-radius: 15px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    }
-
-    h1 {
-        color: #2a5d9f;
-        border-bottom: 3px solid #bcdffb;
-        padding-bottom: 10px;
-        margin-top: 0;
-        text-align: center;
-        font-size: 2em;
-    }
-
-    h2 {
-        color: #2a5d9f;
-        margin-top: 25px;
-        font-size: 1.4em;
-    }
-
-    ul {
-        list-style-type: none;
-        padding-left: 0;
-    }
-
-    ul li {
-        padding: 6px 0;
-        border-left: 4px solid #2a5d9f;
-        padding-left: 10px;
-        margin-bottom: 6px;
-        background: #f8fbff;
-        border-radius: 5px;
-    }
-
-    .profile-section {
-        display: flex;
-        align-items: center;
-        gap: 30px;
-        margin-bottom: 30px;
-    }
-
-    .profile-img {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 5px solid #2a5d9f;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    }
-
-    .about-text {
-        flex-grow: 1;
-    }
-
-    hr {
-        border: none;
-        height: 2px;
-        background: linear-gradient(to right, #2a5d9f, #bcdffb);
-        margin: 30px 0;
-    }
-
-    p, li {
-        font-size: 1.05em;
-    }
-
-    strong {
-        color: #2a5d9f;
-    }
-
-    .btn-download {
-        display: inline-block;
-        margin-top: 15px;
-        padding: 12px 25px;
-        background: linear-gradient(135deg, #2a5d9f, #4682b4);
-        color: white;
-        text-decoration: none;
-        font-size: 1.1em;
-        font-weight: bold;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        transition: background 0.3s ease, transform 0.2s ease;
-    }
-
-    .btn-download:hover {
-        background: linear-gradient(135deg, #1d4473, #36648b);
-        transform: translateY(-2px);
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>張弘新 - 個人簡介</title>
+<style>
+body {
+    font-family: '微軟正黑體', Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #e6f0fa, #bcdffb);
+    color: #333;
+    line-height: 1.6;
+}
+.container {
+    max-width: 850px;
+    margin: 40px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+h1 { color:#2a5d9f; text-align:center; border-bottom:3px solid #bcdffb; padding-bottom:10px; margin-top:0;}
+h2 { color:#2a5d9f; margin-top:25px; }
+ul { list-style: none; padding-left:0; }
+ul li { padding:6px 0; border-left:4px solid #2a5d9f; margin-bottom:6px; background:#f8fbff; border-radius:5px;}
+.profile-section { display:flex; align-items:center; gap:30px; margin-bottom:30px; }
+.profile-img { width:150px; height:150px; border-radius:50%; object-fit:cover; border:5px solid #2a5d9f; box-shadow:0 4px 12px rgba(0,0,0,0.25); }
+.about-text { flex-grow:1; }
+hr { border:none; height:2px; background:linear-gradient(to right,#2a5d9f,#bcdffb); margin:30px 0;}
+.btn-download { display:inline-block; margin-top:15px; padding:12px 25px; background:linear-gradient(135deg,#2a5d9f,#4682b4); color:white; text-decoration:none; font-weight:bold; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.2); transition: background 0.3s ease, transform 0.2s ease;}
+.btn-download:hover { background: linear-gradient(135deg,#1d4473,#36648b); transform:translateY(-2px);}
+.interest-img { width:30px; vertical-align:middle; margin-right:8px;}
+.lang-btn { position:fixed; top:20px; right:20px; padding:8px 16px; background:#2a5d9f; color:white; border:none; border-radius:5px; cursor:pointer; font-weight:bold;}
 </style>
-```
-
 </head>
 <body>
 
+<button class="lang-btn" onclick="toggleLang()">EN</button>
+
 <div class="container">
-    <h1>張弘新 - 個人簡介網站</h1>
+    <h1 id="title">張弘新 - 個人簡介網站</h1>
 
-```
-<div class="profile-section">
-    <img src="me.jpg.png" alt="張弘新個人照片" class="profile-img">
-    <div class="about-text">
-        <h2>關於我</h2>
-        <p>您好，我是 <strong>張弘新</strong>，目前就讀 <strong>中原大學</strong> <strong>智慧運算與大數據學士班</strong> 的學生。</p>
-        <!-- 履歷下載按鈕 -->
-        <a href="resume.pdf" class="btn-download" target="_blank">📄 下載履歷</a>
+    <div class="profile-section">
+        <img src="me.jpg.png" alt="張弘新個人照片" class="profile-img">
+        <div class="about-text">
+            <h2 id="about-title">關於我</h2>
+            <p id="about-text">您好，我是 <strong>張弘新</strong>，目前就讀 <strong>中原大學</strong> <strong>智慧運算與大數據學士班</strong> 的學生。</p>
+            <a href="resume.pdf" class="btn-download" target="_blank" id="resume-btn">📄 下載履歷</a>
+        </div>
     </div>
+
+    <hr>
+
+    <h2 id="interest-title">興趣</h2>
+    <ul>
+        <li><img src="https://images.pexels.com/photos/1552244/pexels-photo-1552244.jpeg" alt="跑步" class="interest-img" id="running-img"> <span id="running-text">跑步</span></li>
+        <li><img src="https://images.pexels.com/photos/416778/pexels-photo-416778.jpeg" alt="健走" class="interest-img" id="walking-img"> <span id="walking-text">健走</span></li>
+        <li><img src="https://images.pexels.com/photos/1148955/pexels-photo-1148955.jpeg" alt="跳舞" class="interest-img" id="dancing-img"> <span id="dancing-text">跳舞</span></li>
+    </ul>
+
+    <hr>
+
+    <h2 id="skills-title">技能</h2>
+    <ul>
+        <li id="skill1"><strong>程式語言:</strong> Python</li>
+        <li id="skill2"><strong>程式語言:</strong> C++</li>
+        <li id="skill3"><strong>程式語言:</strong> C</li>
+        <li id="skill4"><strong>專業技能:</strong> 混音師</li>
+    </ul>
+
+    <hr>
+
+    <h2 id="future-title">未來展望</h2>
+    <p id="future-text">我的目標是成為一位 <strong>量子工程師</strong>。</p>
+
+    <hr>
+
+    <h2 id="contact-title">聯絡方式</h2>
+    <ul>
+        <li id="contact1">Line</li>
+        <li id="contact2">Gmail</li>
+        <li id="contact3">Facebook (FB)</li>
+        <li id="contact4">Instagram (IG)</li>
+        <li id="contact5">電話號碼</li>
+    </ul>
 </div>
 
-<hr>
+<script>
+let lang = 'zh';
 
-<h2>興趣</h2>
-<ul>
-    <li>跑步</li>
-    <li>健走</li>
-    <li>跳舞</li>
-</ul>
+function toggleLang() {
+    if(lang === 'zh'){
+        // 中文 -> 英文
+        document.getElementById('title').innerText = "Sam Chang - Personal Profile";
+        document.getElementById('about-title').innerText = "About Me";
+        document.getElementById('about-text').innerHTML = "Hello, I am <strong>Sam Chang</strong>, currently a student of <strong>Chung Yuan Christian University</strong>, <strong>Bachelor of Intelligent Computing & Big Data</strong>.";
+        document.getElementById('resume-btn').innerText = "📄 Download Resume";
+        document.getElementById('interest-title').innerText = "Hobbies";
+        document.getElementById('running-text').innerText = "Running";
+        document.getElementById('walking-text').innerText = "Walking";
+        document.getElementById('dancing-text').innerText = "Dancing";
+        document.getElementById('skills-title').innerText = "Skills";
+        document.getElementById('skill1').innerHTML = "<strong>Programming:</strong> Python";
+        document.getElementById('skill2').innerHTML = "<strong>Programming:</strong> C++";
+        document.getElementById('skill3').innerHTML = "<strong>Programming:</strong> C";
+        document.getElementById('skill4').innerHTML = "<strong>Professional:</strong> Audio Mixer";
+        document.getElementById('future-title').innerText = "Future Goal";
+        document.getElementById('future-text').innerHTML = "My goal is to become a <strong>Quantum Engineer</strong>.";
+        document.getElementById('contact-title').innerText = "Contact";
+        document.getElementById('contact1').innerText = "Line";
+        document.getElementById('contact2').innerText = "Gmail";
+        document.getElementById('contact3').innerText = "Facebook";
+        document.getElementById('contact4').innerText = "Instagram";
+        document.getElementById('contact5').innerText = "Phone Number";
 
-<hr>
+        document.querySelector('.lang-btn').innerText = "ZH";
+        lang='en';
+    } else {
+        // 英文 -> 中文
+        document.getElementById('title').innerText = "張弘新 - 個人簡介網站";
+        document.getElementById('about-title').innerText = "關於我";
+        document.getElementById('about-text').innerHTML = "您好，我是 <strong>張弘新</strong>，目前就讀 <strong>中原大學</strong> <strong>智慧運算與大數據學士班</strong> 的學生。";
+        document.getElementById('resume-btn').innerText = "📄 下載履歷";
+        document.getElementById('interest-title').innerText = "興趣";
+        document.getElementById('running-text').innerText = "跑步";
+        document.getElementById('walking-text').innerText = "健走";
+        document.getElementById('dancing-text').innerText = "跳舞";
+        document.getElementById('skills-title').innerText = "技能";
+        document.getElementById('skill1').innerHTML = "<strong>程式語言:</strong> Python";
+        document.getElementById('skill2').innerHTML = "<strong>程式語言:</strong> C++";
+        document.getElementById('skill3').innerHTML = "<strong>程式語言:</strong> C";
+        document.getElementById('skill4').innerHTML = "<strong>專業技能:</strong> 混音師";
+        document.getElementById('future-title').innerText = "未來展望";
+        document.getElementById('future-text').innerHTML = "我的目標是成為一位 <strong>量子工程師</strong>。";
+        document.getElementById('contact-title').innerText = "聯絡方式";
+        document.getElementById('contact1').innerText = "Line";
+        document.getElementById('contact2').innerText = "Gmail";
+        document.getElementById('contact3').innerText = "Facebook (FB)";
+        document.getElementById('contact4').innerText = "Instagram (IG)";
+        document.getElementById('contact5').innerText = "電話號碼";
 
-<h2>技能</h2>
-<ul>
-    <li><strong>程式語言:</strong> Python</li>
-    <li><strong>程式語言:</strong> C++</li>
-    <li><strong>程式語言:</strong> C</li>
-    <li><strong>專業技能:</strong> 混音師</li>
-</ul>
-
-<hr>
-
-<h2>未來展望</h2>
-<p>我的目標是成為一位 <strong>量子工程師</strong>。</p>
-
-<hr>
-
-<h2>聯絡方式</h2>
-<ul>
-    <li>Line</li>
-    <li>Gmail</li>
-    <li>Facebook (FB)</li>
-    <li>Instagram (IG)</li>
-    <li>電話號碼</li>
-</ul>
-```
-
-</div>
+        document.querySelector('.lang-btn').innerText = "EN";
+        lang='zh';
+    }
+}
+</script>
 
 </body>
 </html>
